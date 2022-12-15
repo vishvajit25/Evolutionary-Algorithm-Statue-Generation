@@ -55,6 +55,11 @@ for i,C in enumerate(P1):
     mypolys = mymesh.polygons
     for p in mypolys:
         p.use_smooth = True
+        
+    mat = bpy.data.materials.new("MyMaterial")
+    mat.diffuse_color = HEX_VALUE
+
+    myobject.data.materials.append(mat)
     
     FILE_SAVE_PATH="E:\\Research\\Statue Generator\\Rough Work\\Test\\"
     bpy.ops.wm.save_as_mainfile(filepath=FILE_SAVE_PATH+"STATUE_"+str(i)+'.blend')
