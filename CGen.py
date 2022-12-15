@@ -75,4 +75,10 @@ def generate_chromosome(L,B,H,seed):
     FACES=generate_faces(len(VERTICES),seed)
     
     return [r,g,b,a,RoughnessFactor,VERTICES,FACES]
+
+def get_stats(CH):
+    print(f'(R,G,B,A) = ({CH[0]},{CH[1]},{CH[2]},{CH[3]})')
+    print(f'Roughness Factor = {CH[4]}')
+    print(f'Number of vertices = {len(CH[5])}')
+    print(f'Number of faces = {len(CH[6])}')
     
