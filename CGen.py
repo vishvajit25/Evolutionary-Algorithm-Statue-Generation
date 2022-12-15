@@ -1,6 +1,6 @@
 import random
 
-def get_randomColour(seed):
+def get_random_colour(seed):
     random.seed(seed)
     return random.randint(0,255)
 
@@ -8,9 +8,9 @@ def generate_rgbaRo(seed):
     random.seed(seed)
     
     # Randomly generate R,G,B,A and Roughness Factor
-    R=get_randomColour(seed) #Red
-    G=get_randomColour(seed) #Green
-    B=get_randomColour(seed) #Blue
+    R=get_random_colour(seed) #Red
+    G=get_random_colour(seed) #Green
+    B=get_random_colour(seed) #Blue
     A=random.uniform(0,1)   #Alpha (Opacity)
     RoughnessFactor=random.uniform(0,1)
     
@@ -78,7 +78,7 @@ def generate_chromosome(L,B,H,seed):
     
     FACES=generate_faces(len(VERTICES),seed)
     
-    return [r,g,b,a,RoughnessFactor,VERTICES,FACES]
+    return [r,g,b,a,RoughnessFactor,[VERTICES,FACES]]
 
 def get_stats(CH):
     print(f'(R,G,B,A) = ({CH[0]},{CH[1]},{CH[2]},{CH[3]})')
