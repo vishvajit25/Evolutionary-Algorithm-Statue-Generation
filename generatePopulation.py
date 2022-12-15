@@ -1,6 +1,7 @@
 import random
 import copy
 import subprocess
+import bpy
 
 from CGen import *
 
@@ -13,3 +14,4 @@ for _ in range(10):
     P1.append(CH)
     get_stats(CH)
     print('-'*125)
+
