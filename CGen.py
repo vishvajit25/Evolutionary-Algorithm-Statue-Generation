@@ -1,16 +1,12 @@
 import random
 
-def get_random_colour(seed):
-    random.seed(seed)
-    return random.randint(0,255)
-
 def generate_rgbaRo(seed):
     random.seed(seed)
     
     # Randomly generate R,G,B,A and Roughness Factor
-    R=get_random_colour(seed) #Red
-    G=get_random_colour(seed) #Green
-    B=get_random_colour(seed) #Blue
+    R=random.randint(0,255) #Red
+    G=random.randint(0,255) #Green
+    B=random.randint(0,255) #Blue
     A=random.uniform(0,1)   #Alpha (Opacity)
     RoughnessFactor=random.uniform(0,1)
     
