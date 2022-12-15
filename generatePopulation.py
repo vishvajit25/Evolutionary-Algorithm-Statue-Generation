@@ -1,13 +1,14 @@
 import sys
 import bpy
+from ast import literal_eval
 
 my_input = sys.argv
 
 FILE_NUM=my_input[4]
 HEX_VALUE=my_input[5]
-VERTS=my_input[6]
-FACES=my_input[7]
-RO=my_input[8]
+VERTS=literal_eval(my_input[6])
+FACES=literal_eval(my_input[7])
+RO=int(my_input[8])
 
 
     
