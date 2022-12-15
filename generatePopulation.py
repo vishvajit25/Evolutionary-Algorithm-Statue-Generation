@@ -1,7 +1,7 @@
 import random
 import copy
 import subprocess
-import bpy
+# import bpy
 
 from CGen import *
 
@@ -9,7 +9,7 @@ L,B,H=5,5,8
 
 P1=[]
 
-for _ in range(10):
+for _ in range(2):
     CH=generate_chromosome(L,B,H,random.random())
     P1.append(CH)
     get_stats(CH)
