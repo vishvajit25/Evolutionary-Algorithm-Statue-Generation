@@ -52,5 +52,4 @@ mat.diffuse_color = HEX_VALUE
 
 myobject.data.materials.append(mat)
 
-FILE_SAVE_PATH="E:\\Research\\Statue Generator\\Rough Work\\Test\\"
-bpy.ops.wm.save_as_mainfile(filepath=FILE_SAVE_PATH+"STATUE_"+FILE_NUM+'.blend')
+bpy.ops.wm.save_as_mainfile(filepath="E:\\Research\\Statue Generator\\Rough Work\\Test\\STATUE_"+FILE_NUM+'.blend')
