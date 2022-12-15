@@ -62,4 +62,4 @@ for i,C in enumerate(P1):
     myobject.data.materials.append(mat)
     
     FILE_SAVE_PATH="E:\\Research\\Statue Generator\\Rough Work\\Test\\"
-    bpy.ops.wm.save_as_mainfile(filepath=FILE_SAVE_PATH+"STATUE_"+str(i)+'.blend')
+    bpy.ops.wm.save_as_mainfile(filepath=FILE_SAVE_PATH+"STATUE_"+FILE_NUM+'.blend')
