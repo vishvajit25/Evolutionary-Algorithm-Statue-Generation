@@ -1,5 +1,8 @@
 import bpy
 import math
+import sys
+
+my_input = sys.argv
  
 for obj in bpy.data.objects:
     bpy.data.objects.remove(obj)    
@@ -60,8 +63,8 @@ for i in range (0, (Vnum + 1) *(Unum)):
         count = 0
  
 #create mesh and object
-mymesh = bpy.data.meshes.new("supershape")
-myobject = bpy.data.objects.new("supershape",mymesh)
+mymesh = bpy.data.meshes.new(my_input[4])
+myobject = bpy.data.objects.new(my_input[4],mymesh)
  
 #set mesh location
 myobject.location = bpy.context.scene.cursor.location
