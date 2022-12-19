@@ -5,7 +5,7 @@ from ast import literal_eval
 
 my_input = sys.argv
 
-test_arr=literal_eval(my_input[5])
+# test_arr=literal_eval(my_input[5])
  
 for obj in bpy.data.objects:
     bpy.data.objects.remove(obj)    

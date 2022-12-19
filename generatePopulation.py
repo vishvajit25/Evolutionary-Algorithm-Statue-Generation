@@ -5,7 +5,7 @@ from ast import literal_eval
 my_input = sys.argv
 
 FILE_NUM=my_input[4]
-HEX_VALUE=my_input[5]
+COLOUR=literal_eval(my_input[5])
 VERTS=literal_eval(my_input[6])
 FACES=literal_eval(my_input[7])
 RO=int(my_input[8])
@@ -48,7 +48,7 @@ for p in mypolys:
     p.use_smooth = True
     
 mat = bpy.data.materials.new("MyMaterial")
-mat.diffuse_color = HEX_VALUE
+mat.diffuse_color = COLOUR
 
 myobject.data.materials.append(mat)
 
