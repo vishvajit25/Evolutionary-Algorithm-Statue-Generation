@@ -1,5 +1,8 @@
 import random
 import copy
+import os
+import zlib
+import sys
 from CGen import *
 
 def mutate(C,L,B,H):  # sourcery skip: merge-comparisons
@@ -41,3 +44,18 @@ def crossover(C1,C2):
         c1[i], c2[i] = c2[i], c1[i]
     
     return c1,c2
+
+def fitness(PATH):
+    
+    fitness=[]
+    
+    for file in os.listdir(PATH):
+    
+        with open(PATH+"\\"+file, mode="rb") as fin, open(PATH+"\\"+file[:-3]+"_compressed", mode="wb") as fout:
+            data = fin.read()
+            compressed_data = zlib.compress(data, zlib.Z_BEST_COMPRESSION)
+            orig=sys.getsizeof(data)
+            comp=sys.getsizeof(compressed_data)
+            fitness.append(comp/orig)
+        
+    return fitness
