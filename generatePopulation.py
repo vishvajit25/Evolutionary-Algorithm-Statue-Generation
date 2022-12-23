@@ -9,6 +9,7 @@ COLOUR=literal_eval(my_input[5])
 VERTS=literal_eval(my_input[6])
 FACES=literal_eval(my_input[7])
 RO=int(my_input[8])
+OUTPUT_PATH=my_input[9]
 
 
     
