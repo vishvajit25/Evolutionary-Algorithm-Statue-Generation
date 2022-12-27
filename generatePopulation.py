@@ -16,7 +16,15 @@ FACES_FILE=my_input[7]
 RO=int(my_input[8])
 OUTPUT_PATH=my_input[9]
 
+with open(OUTPUT_PATH+"\\"+VERTS_FILE, 'r') as f:
+    VERTS = f.readlines()
 
+VERTS=literal_eval(VERTS[0])
+    
+with open(OUTPUT_PATH+"\\"+FACES_FILE, 'r') as f:
+    FACES = f.readlines()
+
+FACES=literal_eval(FACES[0])    
     
 for obj in bpy.data.objects:
     bpy.data.objects.remove(obj) 

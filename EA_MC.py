@@ -56,6 +56,6 @@ def fitness(PATH):
             compressed_data = zlib.compress(data, zlib.Z_BEST_COMPRESSION)
             orig=sys.getsizeof(data)
             comp=sys.getsizeof(compressed_data)
-            fitness.append(comp/orig)
+            fitness.append(orig/comp)
         
     return fitness
