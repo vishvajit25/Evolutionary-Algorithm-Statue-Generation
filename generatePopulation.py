@@ -6,8 +6,13 @@ my_input = sys.argv
 
 FILE_NUM=my_input[4]
 COLOUR=literal_eval(my_input[5])
-VERTS=literal_eval(my_input[6])
-FACES=literal_eval(my_input[7])
+
+# VERTS=literal_eval(my_input[6])
+# FACES=literal_eval(my_input[7])
+
+VERTS_FILE=my_input[6]
+FACES_FILE=my_input[7]
+
 RO=int(my_input[8])
 OUTPUT_PATH=my_input[9]
 
