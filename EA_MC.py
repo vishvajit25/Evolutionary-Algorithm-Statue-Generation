@@ -50,12 +50,14 @@ def fitness(PATH):
     fitness=[]
     
     for file in os.listdir(PATH):
+        
+        if file.endswith('.blend'):
     
-        with open(PATH+"\\"+file, mode="rb") as fin, open(PATH+"\\"+file[:-3]+"_compressed", mode="wb") as fout:
-            data = fin.read()
-            compressed_data = zlib.compress(data, zlib.Z_BEST_COMPRESSION)
-            orig=sys.getsizeof(data)
-            comp=sys.getsizeof(compressed_data)
-            fitness.append(orig/comp)
+            with open(PATH+"\\"+file, mode="rb") as fin, open(PATH+"\\"+file[:-3]+"_compressed", mode="wb") as fout:
+                data = fin.read()
+                compressed_data = zlib.compress(data, zlib.Z_BEST_COMPRESSION)
+                orig=sys.getsizeof(data)
+                comp=sys.getsizeof(compressed_data)
+                fitness.append(orig/comp)
         
     return fitness
