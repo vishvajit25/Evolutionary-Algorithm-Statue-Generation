@@ -21,7 +21,7 @@ def mutate(C,L,B,H):  # sourcery skip: merge-comparisons
             
             #for alpha and roughness factor
             elif i==3 or i==4:
-                mutated_C[i]=random.uniform(0,1)
+                mutated_C[i]=random.randint(0,255)
             
             #for vertices and faces
             elif i==5:
