@@ -63,9 +63,19 @@ def fitness(PATH):
     return fitness
 
 def fractal_dimension(FACES):
+    
+    def countFrequency(my_list):
+        freq = {}
+        for item in my_list:
+            if (item in freq):
+                freq[item] += 1
+            else:
+                freq[item] = 1
 
-    len_faces=[len(f) for f in faces]
-    unique_count=CountFrequency(len_faces)
+        return freq
+
+    len_faces=[len(f) for f in FACES]
+    unique_count=countFrequency(len_faces)
     print(unique_count)
     res=0
     for key in unique_count:
