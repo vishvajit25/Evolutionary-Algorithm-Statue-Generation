@@ -15,13 +15,13 @@ def mutate(C,L,B,H):  # sourcery skip: merge-comparisons
         # generating a random value and checking for threshold value
         if random.random()>0.5:
             
-            # for colours R,G,B
-            if i==0 or i==1 or i==2:
+            # for colours R,G,B, and Alpha
+            if i==0 or i==1 or i==2 or i==3:
                 mutated_C[i]=random.randint(0,255)
             
-            #for alpha and roughness factor
-            elif i==3 or i==4:
-                mutated_C[i]=random.randint(0,255)
+            #for roughness factor
+            elif i==4:
+                mutated_C[i]=random.randint(0,5)
             
             #for vertices and faces
             elif i==5:
