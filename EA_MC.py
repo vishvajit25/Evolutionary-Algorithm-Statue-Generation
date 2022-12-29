@@ -61,3 +61,14 @@ def fitness(PATH):
                 fitness.append(orig/comp)
         
     return fitness
+
+def fractal_dimension(FACES):
+
+    len_faces=[len(f) for f in faces]
+    unique_count=CountFrequency(len_faces)
+    print(unique_count)
+    res=0
+    for key in unique_count:
+        res+=(1/unique_count[key])
+    
+    return round(res,6)
